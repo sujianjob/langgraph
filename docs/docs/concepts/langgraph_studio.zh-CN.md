@@ -1,0 +1,45 @@
+---
+search:
+  boost: 2
+---
+
+# LangGraph Studio
+
+!!! info "Prerequisites"
+
+    - [LangGraph Platform](./langgraph_platform.md)
+    - [LangGraph Server](./langgraph_server.md)
+    - [LangGraph CLI](./langgraph_cli.md)
+
+LangGraph Studio 是一个专门的代理 IDE，它可以对实现 LangGraph Server API 协议的代理系统进行可视化、交互和调试。Studio 还与 LangSmith 集成，以支持跟踪、评估和提示工程。
+
+![](img/lg_studio.png)
+
+## 功能 (Features)
+
+LangGraph Studio 的主要功能：
+
+- 可视化您的图架构
+- [运行并与您的代理交互](../cloud/how-tos/invoke_studio.md)
+- [管理助手](../cloud/how-tos/studio/manage_assistants.md)
+- [管理线程](../cloud/how-tos/threads_studio.md)
+- [迭代提示](../cloud/how-tos/iterate_graph_studio.md)
+- [在数据集上运行实验](../cloud/how-tos/studio/run_evals.md)
+- 管理 [长期记忆](memory.md)
+- 通过 [时间旅行](time-travel.md) 调试代理状态
+
+LangGraph Studio 适用于部署在 [LangGraph Platform](../cloud/quick_start.md) 上的图，或通过 [LangGraph Server](../tutorials/langgraph-platform/local-server.md) 在本地运行的图。
+
+Studio 支持两种模式：
+
+### 图模式 (Graph mode)
+
+图模式公开了 Studio 的全套功能，当您想要尽可能多地了解代理执行的详细信息时（包括遍历的节点、中间状态和 LangSmith 集成（如添加到数据集和操场）），此模式非常有用。
+
+### 聊天模式 (Chat mode)
+
+聊天模式是一个更简单的 UI，用于迭代和测试特定于聊天的代理。它对业务用户和想要测试整体代理行为的人很有用。聊天模式仅支持其状态包括或扩展 [`MessagesState`](https://langchain-ai.github.io/langgraph/how-tos/graph-api/#messagesstate) 的图。
+
+## 了解更多 (Learn more)
+
+- 请参阅此指南了解如何 [开始使用](../cloud/how-tos/studio/quick_start.md) LangGraph Studio。
